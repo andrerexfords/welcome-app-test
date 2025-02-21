@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">Welcome App - GCP High Level Architecture</text>
+  
+  <!-- GCP Border -->
+  <rect x="50" y="70" width="700" height="480" fill="#e8f0fe" stroke="#4285f4" stroke-width="2" rx="10" />
+  <text x="400" y="90" font-family="Arial" font-size="16" text-anchor="middle">Google Cloud Platform</text>
+  
+  <!-- Network -->
+  <rect x="100" y="110" width="600" height="420" fill="#e1f5fe" stroke="#0288d1" stroke-width="1" rx="5" />
+  <text x="150" y="130" font-family="Arial" font-size="14">VPC Network</text>
+  
+  <!-- Cloud Load Balancer -->
+  <rect x="300" y="150" width="200" height="60" fill="#ffffff" stroke="#4285f4" stroke-width="1" rx="5" />
+  <text x="400" y="185" font-family="Arial" font-size="14" text-anchor="middle">Cloud Load Balancer</text>
+  
+  <!-- GKE Cluster -->
+  <rect x="150" y="250" width="500" height="200" fill="#e6f4ea" stroke="#34a853" stroke-width="1" rx="5" />
+  <text x="400" y="270" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">GKE Cluster</text>
+  
+  <!-- Node Pools -->
+  <rect x="180" y="290" width="200" height="140" fill="#ffffff" stroke="#34a853" stroke-width="1" rx="5" />
+  <text x="280" y="310" font-family="Arial" font-size="12" text-anchor="middle">Node Pool 1</text>
+  <rect x="420" y="290" width="200" height="140" fill="#ffffff" stroke="#34a853" stroke-width="1" rx="5" />
+  <text x="520" y="310" font-family="Arial" font-size="12" text-anchor="middle">Node Pool 2</text>
+  
+  <!-- Pods -->
+  <circle cx="230" cy="340" r="20" fill="#4285f4" opacity="0.7" />
+  <circle cx="310" cy="340" r="20" fill="#4285f4" opacity="0.7" />
+  <circle cx="270" cy="390" r="20" fill="#4285f4" opacity="0.7" />
+  <text x="280" y="360" font-family="Arial" font-size="10" text-anchor="middle">Welcome App Pods</text>
+  
+  <circle cx="470" cy="340" r="20" fill="#fbbc05" opacity="0.7" />
+  <circle cx="550" cy="340" r="20" fill="#fbbc05" opacity="0.7" />
+  <circle cx="510" cy="390" r="20" fill="#fbbc05" opacity="0.7" />
+  <text x="520" y="360" font-family="Arial" font-size="10" text-anchor="middle">Infrastructure Pods</text>
+  
+  <!-- Container Registry -->
+  <rect x="150" y="470" width="150" height="60" fill="#ffffff" stroke="#ea4335" stroke-width="1" rx="5" />
+  <text x="225" y="505" font-family="Arial" font-size="12" text-anchor="middle">Artifact Registry</text>
+  
+  <!-- Cloud SQL -->
+  <rect x="325" y="470" width="150" height="60" fill="#ffffff" stroke="#4285f4" stroke-width="1" rx="5" />
+  <text x="400" y="505" font-family="Arial" font-size="12" text-anchor="middle">Cloud SQL</text>
+  
+  <!-- Secret Manager -->
+  <rect x="500" y="470" width="150" height="60" fill="#ffffff" stroke="#fbbc05" stroke-width="1" rx="5" />
+  <text x="575" y="505" font-family="Arial" font-size="12" text-anchor="middle">Secret Manager</text>
+  
+  <!-- Arrows -->
+  <!-- Internet to LB -->
+  <line x1="400" y1="110" x2="400" y2="150" stroke="#4285f4" stroke-width="2" />
+  <polygon points="400,150 395,140 405,140" fill="#4285f4" />
+  
+  <!-- LB to GKE -->
+  <line x1="400" y1="210" x2="400" y2="250" stroke="#4285f4" stroke-width="2" />
+  <polygon points="400,250 395,240 405,240" fill="#4285f4" />
+  
+  <!-- GKE to Services -->
+  <line x1="225" y1="450" x2="225" y2="470" stroke="#4285f4" stroke-width="1" />
+  <polygon points="225,470 220,460 230,460" fill="#4285f4" />
+  
+  <line x1="400" y1="450" x2="400" y2="470" stroke="#4285f4" stroke-width="1" />
+  <polygon points="400,470 395,460 405,460" fill="#4285f4" />
+  
+  <line x1="575" y1="450" x2="575" y2="470" stroke="#4285f4" stroke-width="1" />
+  <polygon points="575,470 570,460 580,460" fill="#4285f4" />
+  
+  <!-- Legend -->
+  <rect x="620" y="120" width="15" height="15" fill="#4285f4" opacity="0.7" />
+  <text x="640" y="132" font-family="Arial" font-size="10" dominant-baseline="middle">Application Components</text>
+  
+  <rect x="620" y="140" width="15" height="15" fill="#fbbc05" opacity="0.7" />
+  <text x="640" y="152" font-family="Arial" font-size="10" dominant-baseline="middle">Infrastructure Components</text>
+  
+  <rect x="620" y="160" width="15" height="15" fill="#ffffff" stroke="#4285f4" stroke-width="1" />
+  <text x="640" y="172" font-family="Arial" font-size="10" dominant-baseline="middle">GCP Services</text>
+</svg>

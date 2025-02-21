@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: welcome-app
+  labels:
+    app: welcome-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: welcome-app
+  template:
+    metadata:
+      labels:
+        app: welcome-app
+    spec:
+      containers:
+      - name: welcome-app
+        image: testing/welcome:latest
+        ports:
+        - containerPort: 5000
+        envFrom:
+        - configMapRef:
+            name: welcome-app-config
+        - secretRef:
+            name: welcome-app-secret
+        resources:
+          limits:
+            cpu: "0.5"
+            memory: "512Mi"
+          requests:
+            cpu: "0.2"
+            memory: "256Mi"
+        livenessProbe:
+          httpGet:
+            path: /welcome/healthcheck
+            port: 5000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /welcome/healthcheck
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 5
